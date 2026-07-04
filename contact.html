@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Makhana Invitation</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
+      <span class="theme-icon">☀︎</span>
+    </button>
+
+    <div class="page-shell">
+      <header class="topbar">
+        <a href="index.html" class="brand">
+          <img class="brand-logo" src="https://udyamkart.com/wp-content/uploads/2024/03/IMG_20240217_184612-removebg.png" alt="UDYAMkart logo" />
+          <span>
+            <strong>UDYAMkart</strong>
+            <small>Growth & Opportunity</small>
+          </span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="join.html">Join</a>
+          <a href="contact.html" class="active">Contact</a>
+        </nav>
+      </header>
+
+      <main class="page-content contact-layout">
+        <section class="reveal">
+          <p class="eyebrow">Contact us</p>
+          <h1>We would love to hear from you.</h1>
+          <p>Reach out for partnership, joining questions, or general inquiries. We respond with care and professionalism.</p>
+          <div class="contact-details">
+            <p><strong>Email:</strong> <a href="mailto:hello@udyamkart.com">hello@udyamkart.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+919205520952">+91 92055 20952</a></p>
+            <p><strong>Location:</strong> <a href="https://maps.app.goo.gl/aEtYsAZkXnwXj4sZ8?g_st=ac" target="_blank" rel="noopener noreferrer">View on Google Maps</a></p>
+          </div>
+        </section>
+
+        <section class="form-card reveal">
+          <form id="contactForm" class="styled-form">
+            <label>
+              Your name
+              <input type="text" name="name" required placeholder="Your full name" />
+            </label>
+            <label>
+              Your email
+              <input type="email" name="email" required placeholder="you@example.com" />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" required placeholder="Write your message here"></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-message" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>© <span class="year"></span> UDYAMkart. Crafted for thoughtful growth.</p>
+      </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

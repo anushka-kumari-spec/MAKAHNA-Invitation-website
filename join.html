@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join Makhana Invitation</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
+      <span class="theme-icon">☀︎</span>
+    </button>
+
+    <div class="page-shell">
+      <header class="topbar">
+        <a href="index.html" class="brand">
+          <img class="brand-logo" src="https://udyamkart.com/wp-content/uploads/2024/03/IMG_20240217_184612-removebg.png" alt="UDYAMkart logo" />
+          <span>
+            <strong>UDYAMkart</strong>
+            <small>Growth & Opportunity</small>
+          </span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="join.html" class="active">Join</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <main class="page-content">
+        <section class="page-hero reveal">
+          <p class="eyebrow">Join the team</p>
+          <h1>Share a little about yourself and let us welcome you properly.</h1>
+          <p>We are looking for thoughtful, driven individuals who want to grow with us.</p>
+        </section>
+
+        <section class="form-card reveal">
+          <form id="joinForm" class="styled-form">
+            <div class="form-grid">
+              <label>
+                Full name
+                <input type="text" name="name" required placeholder="Your full name" />
+              </label>
+              <label>
+                Email address
+                <input type="email" name="email" required placeholder="you@example.com" />
+              </label>
+            </div>
+            <div class="form-grid">
+              <label>
+                Phone number
+                <input type="tel" name="phone" placeholder="+1 234 567 890" />
+              </label>
+              <label>
+                Interest area
+                <select name="interest">
+                  <option value="Growth">Growth opportunities</option>
+                  <option value="Community">Community leadership</option>
+                  <option value="Design">Creative collaboration</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              Tell us about yourself
+              <textarea name="message" rows="5" placeholder="A short note about your goals and experience"></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Submit Application</button>
+            <p class="form-message" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>© <span class="year"></span> UDYAMkart. Crafted for thoughtful growth.</p>
+      </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
