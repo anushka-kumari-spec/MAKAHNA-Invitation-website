@@ -1,6 +1,6 @@
-# UDYAMkart - Professional Invitation Website
+# UdyamKart - Professional Invitation Website
 
-A modern, premium, and fully responsive web platform designed to create an elegant team invitation experience. This website showcases the UDYAMkart brand with cutting-edge design, smooth animations, and professional engagement tools.
+A modern, premium, and fully responsive web platform designed to create an elegant team invitation experience. This website showcases the UdyamKart brand with cutting-edge design, smooth animations, and professional engagement tools.
 
 ## 🌟 Features
 
@@ -22,7 +22,7 @@ A modern, premium, and fully responsive web platform designed to create an elega
 - **Call-to-Action Section**: Multiple conversion points throughout the site
 
 ### Professional Elements
-- **Official Logo**: UDYAMkart branding integrated from official source
+- **Official Logo**: UdyamKart branding integrated from official source
 - **Contact Information**: 
   - Email: hello@udyamkart.com
   - Phone: +91 92055 20952
@@ -229,7 +229,7 @@ Replace YouTube embed ID in `index.html` showcase section:
 
 ## 📞 Contact & Support
 
-**UDYAMkart**
+**UdyamKart**
 - **Email**: hello@udyamkart.com
 - **Phone**: +91 92055 20952
 - **Website**: https://udyamkart.com
@@ -243,7 +243,7 @@ Makhana (Fox Nuts) is a nutritious seed harvested from the lotus plant, deeply r
 
 ## 📄 License
 
-This project is proprietary to UDYAMkart. All rights reserved.
+This project is proprietary to UdyamKart. All rights reserved.
 
 ## 🎯 Future Enhancements
 
