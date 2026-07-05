@@ -2,14 +2,16 @@
   .hero,
   .split-section,
   .contact-layout,
-  .showcase {
+  .showcase,
+  .invite-benefits {
     grid-template-columns: 1fr;
   }
 
   .stats,
   .cards,
   .about-grid,
-  .steps {
+  .steps,
+  .benefit-cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -38,7 +40,9 @@
   .cards,
   .about-grid,
   .steps,
-  .form-grid {
+  .form-grid,
+  .benefit-cards,
+  .accordion-grid {
     grid-template-columns: 1fr;
   }
 
@@ -48,6 +52,23 @@
 
   .hero-actions {
     flex-direction: column;
+  }
+
+  .faq-section,
+  .invite-benefits,
+  .showcase,
+  .testimonial-section,
+  .countdown,
+  .cta {
+    padding: 22px 18px;
+  }
+
+  .accordion-toggle {
+    padding: 18px 18px;
+  }
+
+  .accordion-content {
+    padding: 16px 18px 18px;
   }
 
   .floating-actions {

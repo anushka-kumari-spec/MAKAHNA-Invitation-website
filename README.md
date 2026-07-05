@@ -1,6 +1,6 @@
-# UdyamKart - Professional Invitation Website
+# Uydamkart - Professional Invitation Website
 
-A modern, premium, and fully responsive web platform designed to create an elegant team invitation experience. This website showcases the UdyamKart brand with cutting-edge design, smooth animations, and professional engagement tools.
+A modern, premium, and fully responsive web platform designed to create an elegant team invitation experience. This website showcases the Uydamkart brand with cutting-edge design, smooth animations, and professional engagement tools.
 
 ## 🌟 Features
 
@@ -22,7 +22,7 @@ A modern, premium, and fully responsive web platform designed to create an elega
 - **Call-to-Action Section**: Multiple conversion points throughout the site
 
 ### Professional Elements
-- **Official Logo**: UdyamKart branding integrated from official source
+- **Official Logo**: Udyamkart branding integrated from official source
 - **Contact Information**: 
   - Email: hello@udyamkart.com
   - Phone: +91 92055 20952
@@ -229,7 +229,7 @@ Replace YouTube embed ID in `index.html` showcase section:
 
 ## 📞 Contact & Support
 
-**UdyamKart**
+**Uydamkart**
 - **Email**: hello@udyamkart.com
 - **Phone**: +91 92055 20952
 - **Website**: https://udyamkart.com
@@ -239,11 +239,11 @@ Replace YouTube embed ID in `index.html` showcase section:
 
 ## 📖 About Makhana
 
-Makhana (Fox Nuts) is a nutritious seed harvested from the lotus plant, deeply rooted in Indian culinary and wellness traditions. Known for its light texture, rich nutritional value, and versatility, makhana symbolizes purity, quality, and heritage—values that UDYAMkart embraces in its mission to support growth and innovation.
+Makhana (Fox Nuts) is a nutritious seed harvested from the lotus plant, deeply rooted in Indian culinary and wellness traditions. Known for its light texture, rich nutritional value, and versatility, makhana symbolizes purity, quality, and heritage—values that Uydamkart embraces in its mission to support growth and innovation.
 
 ## 📄 License
 
-This project is proprietary to UdyamKart. All rights reserved.
+This project is proprietary to Uydamkart. All rights reserved.
 
 ## 🎯 Future Enhancements
 

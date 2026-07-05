@@ -134,11 +134,11 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 18px 24px;
-  background: rgba(8, 11, 24, 0.72);
-  border: 1px solid var(--border);
+  background: rgba(12, 18, 44, 0.88);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 999px;
-  backdrop-filter: blur(16px);
-  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
   position: sticky;
   top: 16px;
   z-index: 10;
@@ -217,7 +217,8 @@ img {
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
   gap: 30px;
-  min-height: 78vh;
+  min-height: 84vh;
+  position: relative;
 }
 
 .eyebrow {
@@ -242,6 +243,7 @@ img {
 .page-hero h1 {
   background: linear-gradient(90deg, #ffffff 0%, #ffd9a6 40%, #b8a6ff 100%);
   background-size: 200% 200%;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textShimmer 7s ease-in-out infinite;
@@ -316,36 +318,71 @@ img {
   color: var(--muted);
 }
 
+.hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.premium-strip {
+  margin-top: 24px;
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+}
+
+.strip-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.premium-strip p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.75;
+}
+
 .hero-visual {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 1;
 }
+
 
 .hero-card {
   position: relative;
   width: min(100%, 420px);
   padding: 28px;
   border-radius: 28px;
-  background: linear-gradient(145deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06));
-  border: 1px solid rgba(255,255,255,0.18);
-  backdrop-filter: blur(18px);
-  box-shadow: var(--shadow);
-  transform: perspective(1000px) rotateX(8deg) rotateY(-10deg);
-  transition: transform 0.3s ease;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.14);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
-  animation: float 6s ease-in-out infinite;
 }
 
 .hero-card::before {
   content: '';
   position: absolute;
-  width: 220px;
-  height: 220px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
-  background: conic-gradient(from 0deg, rgba(255,179,71,0.3), rgba(124,92,255,0.4), rgba(255,179,71,0.3));
-  top: -70px;
-  right: -70px;
-  animation: spin 10s linear infinite;
+  background: radial-gradient(circle, rgba(255,179,71,0.2), transparent 60%);
+  top: -50px;
+  right: -50px;
 }
 
 .hero-card::after {
@@ -353,13 +390,14 @@ img {
   position: absolute;
   inset: 12px;
   border-radius: 22px;
-  background: rgba(8, 11, 24, 0.25);
+  background: rgba(8, 11, 24, 0.22);
   backdrop-filter: blur(8px);
   z-index: 0;
 }
 
 .hero-card:hover {
-  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(-6px);
+  transform: translateY(-4px);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.28);
 }
 
 .card-glow {
@@ -437,11 +475,11 @@ img {
 .feature-card,
 .step-card,
 .form-card {
-  padding: 22px;
-  border-radius: 22px;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  padding: 32px;
+  border-radius: 32px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow: 0 28px 90px rgba(0,0,0,0.18);
   position: relative;
   overflow: hidden;
 }
@@ -471,6 +509,29 @@ img {
 
 .stats span {
   color: var(--muted);
+}
+
+.section-heading {
+  position: relative;
+}
+
+.section-heading::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 72px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+.section-heading h2 {
+  letter-spacing: -0.02em;
+}
+
+.section-heading p {
+  max-width: 680px;
 }
 
 .section-grid,
@@ -602,15 +663,30 @@ img {
 
 .testimonial-slider {
   position: relative;
-  min-height: 140px;
+  min-height: 180px;
 }
 
 .testimonial {
   display: none;
-  padding: 18px 20px;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.14);
+  padding: 24px 24px 20px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+}
+
+.testimonial-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(255,179,71,0.2), rgba(124,92,255,0.25));
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
 }
 
 .testimonial.active {
@@ -799,22 +875,6 @@ img {
   }
   100% {
     transform: translate3d(40px, -30px, 0) scale(1.08);
-  }
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: perspective(1000px) rotateX(8deg) rotateY(-10deg) translateY(0);
-  }
-  50% {
-    transform: perspective(1000px) rotateX(8deg) rotateY(-10deg) translateY(-10px);
   }
 }
 

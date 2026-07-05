@@ -176,6 +176,20 @@ const updateCountdown = () => {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
+const accordions = document.querySelectorAll('.accordion-card');
+accordions.forEach((card) => {
+  const toggle = card.querySelector('.accordion-toggle');
+  const content = card.querySelector('.accordion-content');
+  if (!toggle || !content) return;
+
+  toggle.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+    card.classList.toggle('open', !expanded);
+    content.style.maxHeight = !expanded ? `${content.scrollHeight}px` : '0';
+  });
+});
+
 const forms = document.querySelectorAll('form');
 
 forms.forEach((form) => {
