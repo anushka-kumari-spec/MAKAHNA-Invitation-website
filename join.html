@@ -38,7 +38,8 @@
         </section>
 
         <section class="form-card reveal">
-          <form id="joinForm" class="styled-form">
+          <form id="joinForm" class="styled-form" action="sendmail.php" method="POST">
+            <input type="hidden" name="form_type" value="Join" />
             <div class="form-grid">
               <label>
                 Full name
@@ -65,7 +66,7 @@
             </div>
             <label>
               Tell us about yourself
-              <textarea name="message" rows="5" placeholder="A short note about your goals and experience"></textarea>
+              <textarea name="message" rows="5" required placeholder="A short note about your goals and experience"></textarea>
             </label>
             <button type="submit" class="btn btn-primary">Submit Application</button>
             <p class="form-message" role="status" aria-live="polite"></p>
@@ -74,7 +75,7 @@
       </main>
 
       <footer class="footer">
-        <p>© <span class="year"></span> Uydamkart. Crafted for thoughtful growth.</p>
+        <p>© <span class="year">2026</span> Uydamkart. Crafted for thoughtful growth.</p>
       </footer>
     </div>
 

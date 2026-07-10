@@ -43,7 +43,8 @@
         </section>
 
         <section class="form-card reveal">
-          <form id="contactForm" class="styled-form">
+          <form id="contactForm" class="styled-form" action="sendmail.php" method="POST">
+            <input type="hidden" name="form_type" value="Contact" />
             <label>
               Your name
               <input type="text" name="name" required placeholder="Your full name" />
@@ -63,7 +64,7 @@
       </main>
 
       <footer class="footer">
-        <p>© <span class="year"></span> Udyamkart. Crafted for thoughtful growth.</p>
+        <p>© <span class="year">2026</span> Udyamkart. Crafted for thoughtful growth.</p>
       </footer>
     </div>
 

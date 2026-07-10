@@ -1,7 +1,7 @@
 const revealItems = document.querySelectorAll('.reveal');
 const yearNodes = document.querySelectorAll('.year');
 const heroCard = document.querySelector('.hero-card');
-const statValues = document.querySelectorAll('.stats strong');
+const statValues = document.querySelectorAll('.metric-row strong'); 
 const themeToggle = document.getElementById('themeToggle');
 const testimonials = document.querySelectorAll('.testimonial');
 const canvas = document.getElementById('particles');
@@ -53,46 +53,97 @@ if (themeToggle) {
   });
 }
 
+// 🍿 PREMIUM: Professional 3D Falling Makhana Engine
 if (canvas) {
   const ctx = canvas.getContext('2d');
-  let width = 0;
-  let height = 0;
-  let particles = [];
+  let animationFrameId;
+  
+  let width = (canvas.width = window.innerWidth);
+  let height = (canvas.height = window.innerHeight);
 
-  const resize = () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-    particles = Array.from({ length: Math.min(80, Math.floor(width / 16)) }, () => ({
+  window.addEventListener('resize', () => {
+    width = (canvas.width = window.innerWidth);
+    height = (canvas.height = window.innerHeight);
+  });
+
+  // Balanced count for premium aesthetic (No overcrowding)
+  const maxMakahnas = 22;
+  const makhanas = [];
+
+  for (let i = 0; i < maxMakahnas; i++) {
+    makhanas.push({
       x: Math.random() * width,
-      y: Math.random() * height,
-      size: Math.random() * 2.4 + 0.8,
-      speedX: (Math.random() - 0.5) * 0.55,
-      speedY: (Math.random() - 0.5) * 0.55,
-      alpha: Math.random() * 0.6 + 0.2
-    }));
+      y: Math.random() * height - height,
+      r: Math.random() * 15 + 10, // Various sizes for 3D depth
+      speed: Math.random() * 0.6 + 0.4, // Slow premium cinematic speed
+      angle: Math.random() * Math.PI * 2,
+      spin: Math.random() * 0.01 - 0.005,
+      opacity: Math.random() * 0.25 + 0.15, // Subtle transparency to protect text readability
+      depth: Math.random() * 0.5 + 0.5 // Depth factor for perspective parallax
+    });
+  }
+
+  // Draw an organic 3D-ish stylized Makhana shape programmatically
+  const drawMakhanaShape = (ctx, x, y, r) => {
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, Math.PI * 2);
+    // Adding internal organic structural lines for realistic puff texture
+    ctx.arc(x - r*0.2, y - r*0.1, r * 0.4, 0, Math.PI * 2);
+    ctx.arc(x + r*0.3, y + r*0.2, r * 0.3, 0, Math.PI * 2);
   };
 
-  const draw = () => {
+  const render3DMakhanas = () => {
     ctx.clearRect(0, 0, width, height);
-    particles.forEach((particle) => {
-      particle.x += particle.speedX;
-      particle.y += particle.speedY;
 
-      if (particle.x < 0 || particle.x > width) particle.speedX *= -1;
-      if (particle.y < 0 || particle.y > height) particle.speedY *= -1;
+    const isLight = document.body.getAttribute('data-theme') === 'light';
 
-      ctx.beginPath();
-      ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255,255,255,${particle.alpha})`;
+    makhanas.forEach((m) => {
+      // Move downward based on depth multiplier
+      m.y += m.speed * m.depth;
+      m.angle += m.spin;
+
+      // Wrap around when it hits bottom
+      if (m.y > height + 40) {
+        m.y = -40;
+        m.x = Math.random() * width;
+      }
+
+      ctx.save();
+      ctx.translate(m.x, m.y);
+      ctx.rotate(m.angle);
+
+      // Setup dynamic colors for premium aesthetics based on theme
+      let baseColor = `rgba(255, 249, 235, ${m.opacity})`; // Warm creamy ivory tint
+      let shadowColor = `rgba(184, 166, 255, ${m.opacity * 0.4})`; // Luxury subtle accent shade
+
+      if (isLight) {
+        baseColor = `rgba(240, 230, 210, ${m.opacity * 0.8})`;
+        shadowColor = `rgba(108, 77, 255, 0.05)`;
+      }
+
+      // Applied elegant depth shadows
+      ctx.shadowBlur = 12 * m.depth;
+      ctx.shadowColor = shadowColor;
+      ctx.shadowOffsetX = 4 * m.depth;
+      ctx.shadowOffsetY = 6 * m.depth;
+
+      // Fill basic makhana shade
+      ctx.fillStyle = baseColor;
+      drawMakhanaShape(ctx, 0, 0, m.r);
       ctx.fill();
+
+      // Delicate stroke highlight for raw 3D edge definition
+      ctx.strokeStyle = isLight ? `rgba(0,0,0,0.03)` : `rgba(255,255,255,0.06)`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      ctx.restore();
     });
 
-    requestAnimationFrame(draw);
+    animationFrameId = requestAnimationFrame(render3DMakhanas);
   };
 
-  resize();
-  draw();
-  window.addEventListener('resize', resize);
+  render3DMakhanas();
 }
 
 const animateValue = (element, start, end, duration) => {
@@ -117,10 +168,13 @@ const statObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        const target = Number(entry.target.dataset.target || 0);
-        const suffix = entry.target.dataset.suffix || '';
+        const currentTargetText = entry.target.textContent || '';
+        const targetNumber = parseInt(currentTargetText.replace(/[^0-9]/g, ''), 10) || 500; 
+        const suffix = currentTargetText.replace(/[0-9]/g, '') || '+';
+        
+        entry.target.dataset.suffix = suffix;
         entry.target.textContent = `0${suffix}`;
-        animateValue(entry.target, 0, target, 1100);
+        animateValue(entry.target, 0, targetNumber, 1100);
         statObserver.unobserve(entry.target);
       }
     });
@@ -194,6 +248,11 @@ const forms = document.querySelectorAll('form');
 
 forms.forEach((form) => {
   form.addEventListener('submit', (event) => {
+    const formAction = form.getAttribute('action') || '';
+    if (formAction.includes('.php')) {
+      return; 
+    }
+
     event.preventDefault();
     const messageBox = form.querySelector('.form-message');
 
