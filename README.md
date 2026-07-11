@@ -1,6 +1,6 @@
-# Uydamkart - Professional Invitation Website
+# Udyamkart - Professional Invitation Website
 
-A modern, premium, and fully responsive web platform designed to create an elegant team invitation experience. This website showcases the Uydamkart brand with cutting-edge design, smooth animations, and professional engagement tools.
+A modern, premium, and fully responsive web platform designed to create an elegant team invitation experience. This website showcases the Udyamkart brand with cutting-edge design, smooth animations, and professional engagement tools.
 
 ## 🌟 Features
 
@@ -229,7 +229,7 @@ Replace YouTube embed ID in `index.html` showcase section:
 
 ## 📞 Contact & Support
 
-**Uydamkart**
+**Udyamkart**
 - **Email**: hello@udyamkart.com
 - **Phone**: +91 92055 20952
 - **Website**: https://udyamkart.com

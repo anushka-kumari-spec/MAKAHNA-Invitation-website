@@ -28,9 +28,9 @@ if ($name === "" || !filter_var($email, FILTER_VALIDATE_EMAIL) || $message === "
     exit;
 }
 
-$subject = "New {$formType} Message - Uydamkart Website";
+$subject = "New {$formType} Message - Udyamkart Website";
 
-$body = "You received a new message from the Uydamkart website.\n\n";
+$body = "You received a new message from the Udyamkart website.\n\n";
 $body .= "Name: {$name}\n";
 $body .= "Email: {$email}\n";
 
@@ -45,7 +45,7 @@ if ($interest !== "") {
 $body .= "\nMessage:\n{$message}\n";
 
 $headers = [
-    "From: Uydamkart Website <{$from}>",
+    "From: Udyamkart Website <{$from}>",
     "Reply-To: {$name} <{$email}>",
     "MIME-Version: 1.0",
     "Content-Type: text/plain; charset=UTF-8",
