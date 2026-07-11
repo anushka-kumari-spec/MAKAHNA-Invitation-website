@@ -3,34 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Join Udyamkart's premium makhana business network built for growth, trust, and commercial opportunity." />
+    <meta name="description" content="Join Udyamkart's premium business network built for growth, trust, and commercial opportunity." />
     <title>Udyamkart | Join Our Elite Team</title>
-    
-    <!-- Fonts & Styles -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
   </head>
-  <body style="background-image: linear-gradient(to bottom, rgba(9, 13, 22, 0.88), rgba(9, 13, 22, 0.96)), url('images/makhana_bg.jpg'); background-attachment: fixed; background-position: center; background-size: cover; background-repeat: no-repeat;">
-    <canvas id="particles" aria-hidden="true"></canvas>
-    
-    <!-- Theme Toggle -->
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
-      <span class="theme-icon">☀︎</span>
-    </button>
+  <body>
 
     <div class="page-shell">
-      <!-- Header -->
+      <!-- Premium Spatial Top Bar -->
       <header class="topbar">
         <a href="index.html" class="brand">
           <img class="brand-logo" src="https://udyamkart.com/wp-content/uploads/2024/03/IMG_20240217_184612-removebg.png" alt="Udyamkart logo" />
           <span>
             <strong>Udyamkart</strong>
-            <small>Growth & Opportunity</small>
+            <small>Growth Ecosystem</small>
           </span>
         </a>
+        
+        <!-- FIX: Architectural Capsule Dock Menu -->
         <nav class="nav-links">
           <a href="index.html" class="active">Home</a>
           <a href="about.html">About</a>
@@ -40,191 +30,57 @@
       </header>
 
       <main>
-        <!-- Hero Section with Integrated Registration Form -->
+        <!-- Hero Section -->
         <section class="hero">
-          <div class="hero-copy reveal">
+          <div class="hero-copy">
             <p class="eyebrow">Premium Team Invitation</p>
-            <h1>Scale Your Business With Udyamkart</h1>
+            <h1>Step into a brighter future with Udyamkart, where growth, excellence, and impact come together.</h1>
             <p class="hero-text">
-              Join a trusted, premium makhana network built for ambitious professionals looking for sustainable commercial growth.
+              Udyamkart delivers a confident, modern experience for ambitious people who want to grow with a trusted, professional community.
             </p>
             
+            <div class="hero-actions">
+              <a href="join.html" class="btn btn-primary">Join Our Team</a>
+              <a href="#benefits" class="btn btn-secondary">Discover More</a>
+            </div>
+
             <ul class="hero-highlights">
-              <li>✅ Fast Onboarding</li>
-              <li>✅ High-Growth Model</li>
-              <li>✅ 24/7 Professional Support</li>
+              <li>⚡ Fast Onboarding</li>
+              <li>📈 High-Growth Tracks</li>
+              <li>💼 Enterprise Support</li>
             </ul>
-
-            <div class="premium-strip reveal">
-              <span class="strip-pill">Official Network</span>
-              <p>Curated opportunities with verified quality control and refined operations.</p>
-            </div>
           </div>
 
-          <!-- FIXED: Added 'registration-box' class to match CSS exactly -->
-          <div class="hero-visual reveal">
+          <!-- Application Box -->
+          <div class="hero-visual">
             <div class="hero-card registration-box">
-              <div class="card-glow"></div>
-              <div class="card-content">
-                <p class="mini-label">Secure Application</p>
-                <h2>Apply For Access</h2>
-                <p>Fill out the form below to secure your exclusive invitation.</p>
-                
-                <form action="#" method="POST" class="hero-form">
-                  <div class="form-group">
-                    <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" placeholder="John Doe" required />
-                  </div>
-                  <div class="form-group">
-                    <label for="emailAddress">Email Address</label>
-                    <input type="email" id="emailAddress" name="emailAddress" placeholder="john@example.com" required />
-                  </div>
-                  <div class="form-group">
-                    <label for="phoneNumber">Phone Number</label>
-                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+91 XXXXX XXXXX" required />
-                  </div>
-                  <button type="submit" class="btn btn-primary form-submit-btn">Submit Application</button>
-                </form>
-
-                <div class="metric-row">
-                  <div>
-                    <strong>500+</strong>
-                    <span>Active Members</span>
-                  </div>
-                  <div>
-                    <strong>100%</strong>
-                    <span>Verified Partners</span>
-                  </div>
+              <p class="mini-label">Exclusive Access</p>
+              <h2>Launch with confidence</h2>
+              <p style="color: var(--muted); font-size: 0.95rem; margin-bottom: 24px;">Be part of a modern network that is passionate, organized, and driven.</p>
+              
+              <form action="#" method="POST" class="hero-form">
+                <div class="form-group" style="margin-bottom: 16px;">
+                  <input type="text" id="fullName" name="fullName" placeholder="Full Name" required />
                 </div>
-              </div>
+                <div class="form-group" style="margin-bottom: 16px;">
+                  <input type="email" id="emailAddress" name="emailAddress" placeholder="Email Address" required />
+                </div>
+                <div class="form-group" style="margin-bottom: 24px;">
+                  <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required />
+                </div>
+                <button type="submit" class="btn btn-primary form-submit-btn">Submit Application</button>
+              </form>
             </div>
-          </div>
-        </section>
-
-        <!-- Benefits Section -->
-        <section class="invite-benefits reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Key Benefits</p>
-            <h2>Built For Professional Impact</h2>
-          </div>
-          <div class="benefit-cards">
-            <article class="benefit-card">
-              <h3>Premium Access</h3>
-              <p>Direct entry into our premium ecosystem with dedicated onboarding priority.</p>
-            </article>
-            <article class="benefit-card">
-              <h3>Trusted Partnership</h3>
-              <p>Collaborate with global standards of quality control and business management.</p>
-            </article>
-            <article class="benefit-card">
-              <h3>Verified Scale</h3>
-              <p>Unlock optimized sourcing pipelines designed for rapid commercial growth.</p>
-            </article>
-          </div>
-        </section>
-
-        <!-- Countdown Section -->
-        <section class="countdown reveal">
-          <div>
-            <p class="eyebrow">Upcoming Milestone</p>
-            <h2>Next Commercial Batch Launching Soon</h2>
-            <p>Secure your partnership slot before registrations close.</p>
-          </div>
-          <div class="countdown-grid">
-            <div><strong id="days">00</strong><span>Days</span></div>
-            <div><strong id="hours">00</strong><span>Hours</span></div>
-            <div><strong id="minutes">00</strong><span>Minutes</span></div>
-            <div><strong id="seconds">00</strong><span>Seconds</span></div>
-          </div>
-        </section>
-
-        <!-- Video Showcase Section -->
-        <section class="showcase reveal">
-          <div class="showcase-media">
-            <div class="media-frame">
-              <iframe
-                class="video-embed"
-                src="https://www.youtube.com/embed/2Z4m4lnjxkY?rel=0"
-                title="Makhana processing video"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-          <div class="showcase-copy">
-            <p class="eyebrow">Operations Video</p>
-            <h2>Transparent Processing Standards</h2>
-            <p>See how our premium quality control and operations run at the ground level.</p>
-            <a class="btn btn-secondary" href="contact.html">Book a Consultation</a>
-          </div>
-        </section>
-
-        <!-- Testimonial Section -->
-        <section class="testimonial-section reveal">
-          <div class="testimonial-head">
-            <p class="eyebrow">Partner Feedback</p>
-            <h2>Trusted By Top Industry Leaders</h2>
-          </div>
-          <div class="testimonial-slider" id="testimonialSlider">
-            <article class="testimonial active">
-              <span class="testimonial-badge">Verified Partner</span>
-              <p>“The experience feels highly professional and optimized right from day one.”</p>
-              <strong>— Olivia Carter</strong>
-            </article>
-            <article class="testimonial">
-              <span class="testimonial-badge">Verified Partner</span>
-              <p>“Transparent supply chain and exceptional team support throughout.”</p>
-              <strong>— Daniel Ross</strong>
-            </article>
-          </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="faq-section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">FAQ</p>
-            <h2>Frequently Asked Questions</h2>
-          </div>
-          <div class="accordion-grid">
-            <article class="accordion-card">
-              <button class="accordion-toggle" type="button" aria-expanded="false">Who is this program for?</button>
-              <div class="accordion-content">
-                <p>Professionals and business owners seeking premium makhana network access and scalable growth channels.</p>
-              </div>
-            </article>
-            <article class="accordion-card">
-              <button class="accordion-toggle" type="button" aria-expanded="false">What support do you provide?</button>
-              <div class="accordion-content">
-                <p>Full logistics guidance, end-to-end quality control resources, and operational assistance.</p>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <!-- Call to Action Section -->
-        <section class="cta reveal">
-          <h2>Ready To Accelerate Your Business Growth?</h2>
-          <p>Apply today and access the next commercial batch.</p>
-          <div class="hero-actions cta-actions">
-            <a class="btn btn-primary" href="join.html">Apply Now</a>
-            <a class="btn btn-secondary" href="contact.html">Contact Us</a>
           </div>
         </section>
       </main>
-
-      <!-- Footer -->
-      <footer class="footer">
-        <p>© <span class="year">2026</span> Udyamkart. Crafted for thoughtful growth.</p>
-      </footer>
     </div>
 
-    <!-- Floating Actions Container -->
+    <!-- Floating UI Actions -->
     <div class="floating-actions">
-      <a class="fab fab-whatsapp-large" href="https://wa.me/919205520952" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
-      <a class="fab fab-call-large" href="tel:+919205520952" aria-label="Call us">📞</a>
+      <a class="fab fab-whatsapp-large" href="https://wa.me/919205520952" target="_blank" rel="noopener noreferrer">💬</a>
+      <a class="fab fab-call-large" href="tel:+919205520952">📞</a>
     </div>
 
-    <script src="js/script.js"></script>
   </body>
 </html>

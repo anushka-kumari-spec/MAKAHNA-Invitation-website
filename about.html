@@ -8,28 +8,24 @@
     <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
-    <canvas id="particles" aria-hidden="true"></canvas>
-    
-    <!-- Theme Toggle -->
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
-      <span class="theme-icon">☀︎</span>
-    </button>
 
     <div class="page-shell">
-      <!-- Header -->
+      <!-- Premium Spatial Top Bar (Fixed Capsule Style) -->
       <header class="topbar">
         <a href="index.html" class="brand">
           <img class="brand-logo" src="https://udyamkart.com/wp-content/uploads/2024/03/IMG_20240217_184612-removebg.png" alt="Udyamkart logo" />
           <span>
             <strong>Udyamkart</strong>
-            <small>Growth & Opportunity</small>
+            <small>Growth Ecosystem</small>
           </span>
         </a>
+        
+        <!-- FIX: Architectural Capsule Dock Menu (No Notification Vibe) -->
         <nav class="nav-links">
           <a href="index.html">Home</a>
           <a href="about.html" class="active">About</a>
@@ -39,58 +35,59 @@
       </header>
 
       <!-- Main Content Block -->
-      <main class="page-content" style="padding: 40px 0; display: flex; flex-direction: column; gap: 60px;">
+      <main class="page-content" style="padding: 40px 0; display: flex; flex-direction: column; gap: 80px;">
         
-        <!-- Hero Section -->
-        <section class="page-hero reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">
-          <p class="eyebrow" style="justify-content: center;">About our mission</p>
-          <h1 style="font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.15; margin-bottom: 20px; background: linear-gradient(135deg, #ffffff 40%, #c7d2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        <!-- Hero Section with Premium Clean Typography -->
+        <section class="page-hero reveal" style="text-align: center; max-width: 850px; margin: 0 auto;">
+          <p class="eyebrow" style="color: var(--accent-blue);">About our mission</p>
+          <h1 style="font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 700; line-height: 1.2; margin-bottom: 24px; color: #ffffff;">
             We build elegant opportunities for people who want to shine.
           </h1>
-          <p class="hero-text" style="font-size: 1.1rem; color: var(--muted); line-height: 1.6;">
+          <p class="hero-text" style="font-size: 1.15rem; color: var(--muted); line-height: 1.75;">
             Udyamkart is designed to feel premium, purposeful, and encouraging. Whether you are joining as an enterprise team member or exploring a strategic career path, we make every step feel clear, modern, and absolutely confident.
           </p>
         </section>
 
-        <!-- 3-Card Core Pillars Grid -->
-        <section class="about-grid reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; width: 100%;">
+        <!-- 3-Card Core Pillars Grid (Cleaned From Neon Highlights) -->
+        <section class="about-grid reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; width: 100%;">
           
-          <article class="feature-card" style="padding: 30px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06); backdrop-filter: blur(16px); border-radius: 20px; transition: transform 0.3s ease, border-color 0.3s ease;">
-            <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 1.2rem;">👁️‍🗨️</div>
-            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 12px; color: var(--text);">Our Vision</h3>
-            <p style="color: var(--muted); line-height: 1.6; font-size: 0.95rem;">To create a high-tier professional ecosystem where people can discover meaningful operations and scale with absolute industry confidence.</p>
+          <article class="feature-card" style="padding: 40px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); backdrop-filter: blur(24px); border-radius: 24px;">
+            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(102, 155, 188, 0.1); border: 1px solid rgba(102, 155, 188, 0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 1.2rem;">👁️‍🗨️</div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; color: var(--text);">Our Vision</h3>
+            <p style="color: var(--muted); line-height: 1.65; font-size: 0.95rem;">To create a high-tier professional ecosystem where people can discover meaningful operations and scale with absolute industry confidence.</p>
           </article>
 
-          <article class="feature-card" style="padding: 30px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06); backdrop-filter: blur(16px); border-radius: 20px; transition: transform 0.3s ease, border-color 0.3s ease;">
-            <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(236, 72, 153, 0.1); border: 1px solid rgba(236, 72, 153, 0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 1.2rem;">💎</div>
-            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 12px; color: var(--text);">Our Values</h3>
-            <p style="color: var(--muted); line-height: 1.6; font-size: 0.95rem;">We build everything on the foundations of operational transparency, radical respect, strong ambition, and long-term asset success.</p>
+          <article class="feature-card" style="padding: 40px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); backdrop-filter: blur(24px); border-radius: 24px;">
+            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(230, 92, 43, 0.1); border: 1px solid rgba(230, 92, 43, 0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 1.2rem;">💎</div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; color: var(--text);">Our Values</h3>
+            <p style="color: var(--muted); line-height: 1.65; font-size: 0.95rem;">We build everything on the foundations of operational transparency, radical respect, strong ambition, and long-term asset success.</p>
           </article>
 
-          <article class="feature-card" style="padding: 30px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06); backdrop-filter: blur(16px); border-radius: 20px; transition: transform 0.3s ease, border-color 0.3s ease;">
-            <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(45, 212, 191, 0.1); border: 1px solid rgba(45, 212, 191, 0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 1.2rem;">⚡</div>
-            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 12px; color: var(--text);">Our Approach</h3>
-            <p style="color: var(--muted); line-height: 1.6; font-size: 0.95rem;">We blend ultra-clean user experiences, welcoming corporate communication, and high-reliability structures to make ecosystem growth natural.</p>
+          <article class="feature-card" style="padding: 40px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); backdrop-filter: blur(24px); border-radius: 24px;">
+            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(102, 155, 188, 0.1); border: 1px solid rgba(102, 155, 188, 0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 1.2rem;">⚡</div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; color: var(--text);">Our Approach</h3>
+            <p style="color: var(--muted); line-height: 1.65; font-size: 0.95rem;">We blend ultra-clean user experiences, welcoming corporate communication, and high-reliability structures to make ecosystem growth natural.</p>
           </article>
 
         </section>
 
-        <!-- Premium Makhana Story Box (Split Design layout) -->
-        <section class="story-card reveal" style="max-width: 1200px; margin: 0 auto; width: 100%; padding: 45px; background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(24px); border-radius: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
+        <!-- Premium Makhana Story Box (Solid Accents Only) -->
+        <section class="story-card reveal" style="max-width: 1200px; margin: 0 auto; width: 100%; padding: 50px; background: rgba(255, 255, 255, 0.01); border: 1px solid var(--border); backdrop-filter: blur(32px); border-radius: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 50px; align-items: center;">
           
           <div>
-            <p class="eyebrow" style="color: var(--accent-2);">The Makhana story</p>
-            <h2 style="font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 15px; color: var(--text);">
+            <p class="eyebrow" style="color: var(--accent);">The Makhana story</p>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 700; line-height: 1.25; margin-bottom: 16px; color: var(--text);">
               Inspired by a timeless superfood from India.
             </h2>
-            <div style="width: 60px; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); border-radius: 2px; margin-top: 20px;"></div>
+            <!-- Clean Solid Color Separator -->
+            <div style="width: 50px; height: 3px; background: var(--accent); border-radius: 2px; margin-top: 24px;"></div>
           </div>
 
-          <div style="display: flex; flex-direction: column; gap: 18px;">
-            <p style="color: var(--muted); line-height: 1.7; font-size: 1rem; margin: 0;">
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <p style="color: var(--muted); line-height: 1.75; font-size: 1.05rem; margin: 0;">
               Makhana, also famously recognized as premium fox nuts, is a nutritional powerhouse seed harvested intricately from aquatic lotus ecosystems. Deeply rooted across India—especially celebrated throughout the fertile heritage of Bihar—it is admired globally for its impossibly light crunch and dense therapeutic profiles.
             </p>
-            <p style="color: var(--muted); line-height: 1.7; font-size: 1rem; margin: 0;">
+            <p style="color: var(--muted); line-height: 1.75; font-size: 1.05rem; margin: 0;">
               At Udyamkart, we mirror that exact cycle of natural purity, premium calibration, and cultural pride. Just as authentic makhana serves as a golden global benchmark for clean wellness, our commercial network stands firm on flawless trust, structured empowerment, and a modern digital route forward.
             </p>
           </div>
@@ -100,8 +97,14 @@
 
       <!-- Footer -->
       <footer class="footer">
-        <p>© <span class="year">2026</span> Udyamkart. Crafted for thoughtful growth.</p>
+        <p>© 2026 Udyamkart. Crafted for thoughtful growth.</p>
       </footer>
+    </div>
+
+    <!-- Floating Clean Actions Frame -->
+    <div class="floating-actions">
+      <a class="fab fab-whatsapp-large" href="https://wa.me/919205520952" target="_blank" rel="noopener noreferrer">💬</a>
+      <a class="fab fab-call-large" href="tel:+919205520952">📞</a>
     </div>
 
     <script src="js/script.js"></script>
