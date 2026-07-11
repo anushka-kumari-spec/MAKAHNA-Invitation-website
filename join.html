@@ -3,20 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Join Makhana Invitation</title>
+    <title>Join Makhana Network | Udyamkart Invitation</title>
+    
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
     <canvas id="particles" aria-hidden="true"></canvas>
+    
+    <!-- Theme Toggle -->
     <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
       <span class="theme-icon">☀︎</span>
     </button>
 
     <div class="page-shell">
+      <!-- Header -->
       <header class="topbar">
         <a href="index.html" class="brand">
-          <img class="brand-logo" src="https://udyamkart.com/wp-content/uploads/2024/03/IMG_20240217_184612-removebg.png" alt="Uydamkart logo" />
+          <img class="brand-logo" src="https://udyamkart.com/wp-content/uploads/2024/03/IMG_20240217_184612-removebg.png" alt="Udyamkart logo" />
           <span>
             <strong>Udyamkart</strong>
             <small>Growth & Opportunity</small>
@@ -31,52 +39,79 @@
       </header>
 
       <main class="page-content">
-        <section class="page-hero reveal">
-          <p class="eyebrow">Join the team</p>
-          <h1>Share a little about yourself and let us welcome you properly.</h1>
-          <p>We are looking for thoughtful, driven individuals who want to grow with us.</p>
+        <!-- Main Page Hero Title Section -->
+        <section class="page-hero reveal" style="text-align: center; max-width: 700px; margin: 60px auto 40px;">
+          <p class="eyebrow">Join the elite team</p>
+          <h1 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1.2; margin-bottom: 20px; background: linear-gradient(135deg, #ffffff 40%, #c7d2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            Share your details & kickstart your growth journey
+          </h1>
+          <p style="color: var(--muted); font-size: 1.05rem; line-height: 1.6;">
+            We are looking for thoughtful, driven individuals who want to scale premium business networks with us.
+          </p>
         </section>
 
-        <section class="form-card reveal">
-          <form id="joinForm" class="styled-form" action="sendmail.php" method="POST">
-            <input type="hidden" name="form_type" value="Join" />
-            <div class="form-grid">
-              <label>
-                Full name
-                <input type="text" name="name" required placeholder="Your full name" />
-              </label>
-              <label>
-                Email address
-                <input type="email" name="email" required placeholder="you@example.com" />
-              </label>
-            </div>
-            <div class="form-grid">
-              <label>
-                Phone number
-                <input type="tel" name="phone" placeholder="+1 234 567 890" />
-              </label>
-              <label>
-                Interest area
-                <select name="interest">
-                  <option value="Growth">Growth opportunities</option>
-                  <option value="Community">Community leadership</option>
-                  <option value="Design">Creative collaboration</option>
-                </select>
-              </label>
-            </div>
-            <label>
-              Tell us about yourself
-              <textarea name="message" rows="5" required placeholder="A short note about your goals and experience"></textarea>
-            </label>
-            <button type="submit" class="btn btn-primary">Submit Application</button>
-            <p class="form-message" role="status" aria-live="polite"></p>
-          </form>
+        <!-- Glassmorphic Premium Form Card -->
+        <section class="reveal" style="max-width: 650px; margin: 0 auto 80px;">
+          <!-- Using your pre-defined hero-card class for consistency -->
+          <div class="hero-card registration-box" style="max-width: 100%; padding: 40px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(24px); border-radius: 24px;">
+            
+            <form id="joinForm" class="hero-form" action="sendmail.php" method="POST">
+              <input type="hidden" name="form_type" value="Join" />
+              
+              <!-- First Row: Name and Email -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name" required placeholder="John Doe" />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" required placeholder="john@example.com" />
+                </div>
+              </div>
+
+              <!-- Second Row: Phone and Dropdown -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 10px;">
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" />
+                </div>
+                <div class="form-group">
+                  <label for="interest">Interest Area</label>
+                  <!-- Styled select inline to match your input fields exactly -->
+                  <select id="interest" name="interest" style="width: 100%; padding: 14px 16px; border-radius: 10px; border: 1px solid var(--border); background: #111625; color: var(--text); font-size: 0.95rem; font-family: inherit; transition: all 0.25s ease; cursor: pointer; outline: none;">
+                    <option value="Growth">Growth Opportunities</option>
+                    <option value="Community">Community Leadership</option>
+                    <option value="Design">Creative Collaboration</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Message/Textarea field -->
+              <div class="form-group" style="margin-top: 10px;">
+                <label for="message">Tell us about yourself</label>
+                <textarea id="message" name="message" rows="5" required placeholder="A short note about your goals, experience, or business vision..." style="width: 100%; padding: 14px 16px; border-radius: 10px; border: 1px solid var(--border); background: rgba(255, 255, 255, 0.03); color: var(--text); font-size: 0.95rem; font-family: inherit; resize: vertical; transition: all 0.25s ease; outline: none;"></textarea>
+              </div>
+
+              <!-- Action Button -->
+              <button type="submit" class="btn btn-primary form-submit-btn" style="margin-top: 15px;">Submit Application</button>
+              
+              <p class="form-message" role="status" aria-live="polite" style="text-align: center; margin-top: 10px; font-size: 0.9rem;"></p>
+            </form>
+
+          </div>
         </section>
       </main>
 
+      <!-- Footer -->
       <footer class="footer">
-        <p>© <span class="year">2026</span> Uydamkart. Crafted for thoughtful growth.</p>
+        <p>© <span class="year">2026</span> Udyamkart. Crafted for thoughtful growth.</p>
       </footer>
+    </div>
+
+    <!-- Floating Actions Container -->
+    <div class="floating-actions" style="position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 99;">
+      <a class="fab fab-whatsapp" href="https://wa.me/919205520952" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" style="text-decoration: none; background: #25d366; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.3); font-size: 1.2rem;">💬</a>
     </div>
 
     <script src="js/script.js"></script>

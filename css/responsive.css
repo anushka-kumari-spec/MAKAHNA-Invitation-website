@@ -67,11 +67,28 @@
     width: 100%;
   }
 
+  /* 🛠 FIXED: Sir ka bataya hua Countdown Layout Overflow Fix */
+  .countdown {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    padding: 22px 18px;
+  }
+
+  .countdown-grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* 4 items ko 2x2 grid me stack karega */
+    gap: 12px !important;
+    width: 100% !important;
+    margin-top: 18px;
+  }
+
+  .countdown-grid div {
+    padding: 14px 10px !important;
+  }
+
   .faq-section,
   .invite-benefits,
   .showcase,
   .testimonial-section,
-  .countdown,
   .cta {
     padding: 22px 18px;
   }

@@ -6,6 +6,7 @@ const themeToggle = document.getElementById('themeToggle');
 const testimonials = document.querySelectorAll('.testimonial');
 const canvas = document.getElementById('particles');
 
+// --- 1. Intersection Observer for Scroll Animations ---
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -20,10 +21,12 @@ const observer = new IntersectionObserver(
 
 revealItems.forEach((item) => observer.observe(item));
 
+// --- 2. Dynamic Year Dynamic Injector ---
 yearNodes.forEach((node) => {
   node.textContent = new Date().getFullYear();
 });
 
+// --- 3. Premium 3D Hero Card Parallax ---
 if (heroCard) {
   heroCard.addEventListener('pointermove', (event) => {
     const rect = heroCard.getBoundingClientRect();
@@ -34,26 +37,29 @@ if (heroCard) {
   });
 
   heroCard.addEventListener('pointerleave', () => {
-    heroCard.style.transform = 'perspective(1000px) rotateX(8deg) rotateY(-10deg) translateY(0)';
+    heroCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
   });
 }
 
+// --- 4. Dark/Light Theme Switching Engine ---
 if (themeToggle) {
   const storedTheme = localStorage.getItem('theme');
   if (storedTheme === 'light') {
     document.body.setAttribute('data-theme', 'light');
-    themeToggle.querySelector('.theme-icon').textContent = '☾';
+    const icon = themeToggle.querySelector('.theme-icon');
+    if (icon) icon.textContent = '☾';
   }
 
   themeToggle.addEventListener('click', () => {
     const isLight = document.body.getAttribute('data-theme') === 'light';
     document.body.setAttribute('data-theme', isLight ? 'dark' : 'light');
     localStorage.setItem('theme', isLight ? 'dark' : 'light');
-    themeToggle.querySelector('.theme-icon').textContent = isLight ? '☀︎' : '☾';
+    const icon = themeToggle.querySelector('.theme-icon');
+    if (icon) icon.textContent = isLight ? '☀︎' : '☾';
   });
 }
 
-// 🍿 PREMIUM: Professional 3D Falling Makhana Engine
+// --- 5. 🍿 PREMIUM: Professional 3D Falling Makhana Engine (FIXED) ---
 if (canvas) {
   const ctx = canvas.getContext('2d');
   let animationFrameId;
@@ -66,43 +72,49 @@ if (canvas) {
     height = (canvas.height = window.innerHeight);
   });
 
-  // Balanced count for premium aesthetic (No overcrowding)
-  const maxMakahnas = 22;
+  const maxMakahnas = 22; // Balanced premium aesthetic layout
   const makhanas = [];
 
   for (let i = 0; i < maxMakahnas; i++) {
     makhanas.push({
       x: Math.random() * width,
-      y: Math.random() * height - height,
-      r: Math.random() * 15 + 10, // Various sizes for 3D depth
-      speed: Math.random() * 0.6 + 0.4, // Slow premium cinematic speed
+      y: Math.random() * height,
+      r: Math.random() * 12 + 10, 
+      speed: Math.random() * 0.4 + 0.3, // Ultra slow elegant cinematic movement
       angle: Math.random() * Math.PI * 2,
-      spin: Math.random() * 0.01 - 0.005,
-      opacity: Math.random() * 0.25 + 0.15, // Subtle transparency to protect text readability
-      depth: Math.random() * 0.5 + 0.5 // Depth factor for perspective parallax
+      spin: Math.random() * 0.006 - 0.003,
+      opacity: Math.random() * 0.22 + 0.12, 
+      depth: Math.random() * 0.5 + 0.5 
     });
   }
 
-  // Draw an organic 3D-ish stylized Makhana shape programmatically
+  // FIXED: Organic shape draw method with path resets to prevent rendering blockades
   const drawMakhanaShape = (ctx, x, y, r) => {
     ctx.beginPath();
     ctx.arc(x, y, r, 0, Math.PI * 2);
-    // Adding internal organic structural lines for realistic puff texture
-    ctx.arc(x - r*0.2, y - r*0.1, r * 0.4, 0, Math.PI * 2);
-    ctx.arc(x + r*0.3, y + r*0.2, r * 0.3, 0, Math.PI * 2);
+    ctx.closePath();
+    ctx.fill();
+
+    // Secondary sub-puffs safely separated for premium depth texture
+    ctx.beginPath();
+    ctx.arc(x - r * 0.2, y - r * 0.1, r * 0.4, 0, Math.PI * 2);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(x + r * 0.3, y + r * 0.2, r * 0.3, 0, Math.PI * 2);
+    ctx.closePath();
+    ctx.fill();
   };
 
   const render3DMakhanas = () => {
     ctx.clearRect(0, 0, width, height);
-
     const isLight = document.body.getAttribute('data-theme') === 'light';
 
     makhanas.forEach((m) => {
-      // Move downward based on depth multiplier
       m.y += m.speed * m.depth;
       m.angle += m.spin;
 
-      // Wrap around when it hits bottom
       if (m.y > height + 40) {
         m.y = -40;
         m.x = Math.random() * width;
@@ -112,28 +124,23 @@ if (canvas) {
       ctx.translate(m.x, m.y);
       ctx.rotate(m.angle);
 
-      // Setup dynamic colors for premium aesthetics based on theme
-      let baseColor = `rgba(255, 249, 235, ${m.opacity})`; // Warm creamy ivory tint
-      let shadowColor = `rgba(184, 166, 255, ${m.opacity * 0.4})`; // Luxury subtle accent shade
+      let baseColor = `rgba(255, 249, 235, ${m.opacity})`; 
+      let shadowColor = `rgba(184, 166, 255, ${m.opacity * 0.4})`; 
 
       if (isLight) {
-        baseColor = `rgba(240, 230, 210, ${m.opacity * 0.8})`;
-        shadowColor = `rgba(108, 77, 255, 0.05)`;
+        baseColor = `rgba(238, 228, 208, ${m.opacity * 0.85})`;
+        shadowColor = `rgba(108, 77, 255, 0.04)`;
       }
 
-      // Applied elegant depth shadows
-      ctx.shadowBlur = 12 * m.depth;
+      ctx.shadowBlur = 10 * m.depth;
       ctx.shadowColor = shadowColor;
-      ctx.shadowOffsetX = 4 * m.depth;
-      ctx.shadowOffsetY = 6 * m.depth;
+      ctx.shadowOffsetX = 3 * m.depth;
+      ctx.shadowOffsetY = 5 * m.depth;
 
-      // Fill basic makhana shade
       ctx.fillStyle = baseColor;
       drawMakhanaShape(ctx, 0, 0, m.r);
-      ctx.fill();
 
-      // Delicate stroke highlight for raw 3D edge definition
-      ctx.strokeStyle = isLight ? `rgba(0,0,0,0.03)` : `rgba(255,255,255,0.06)`;
+      ctx.strokeStyle = isLight ? `rgba(0,0,0,0.02)` : `rgba(255,255,255,0.05)`;
       ctx.lineWidth = 1;
       ctx.stroke();
 
@@ -146,6 +153,7 @@ if (canvas) {
   render3DMakhanas();
 }
 
+// --- 6. Smooth Stats Counters Animation ---
 const animateValue = (element, start, end, duration) => {
   const startTime = performance.now();
 
@@ -184,6 +192,7 @@ const statObserver = new IntersectionObserver(
 
 statValues.forEach((value) => statObserver.observe(value));
 
+// --- 7. Testimonial Rotator Logic ---
 let testimonialIndex = 0;
 const rotateTestimonials = () => {
   if (!testimonials.length) return;
@@ -193,9 +202,12 @@ const rotateTestimonials = () => {
   testimonialIndex = (testimonialIndex + 1) % testimonials.length;
 };
 
-setInterval(rotateTestimonials, 4500);
-rotateTestimonials();
+if (testimonials.length > 0) {
+  setInterval(rotateTestimonials, 4500);
+  rotateTestimonials();
+}
 
+// --- 8. Premium Launch Event Countdown Clock ---
 const countdownElements = {
   days: document.getElementById('days'),
   hours: document.getElementById('hours'),
@@ -230,6 +242,7 @@ const updateCountdown = () => {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
+// --- 9. Smooth Interactive Accordions ---
 const accordions = document.querySelectorAll('.accordion-card');
 accordions.forEach((card) => {
   const toggle = card.querySelector('.accordion-toggle');
@@ -244,8 +257,8 @@ accordions.forEach((card) => {
   });
 });
 
+// --- 10. AJAX / Local Intelligent Form Interceptor ---
 const forms = document.querySelectorAll('form');
-
 forms.forEach((form) => {
   form.addEventListener('submit', (event) => {
     const formAction = form.getAttribute('action') || '';

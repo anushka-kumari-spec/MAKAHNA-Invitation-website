@@ -3,27 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Udyamkart is a premium business invitation platform for professionals who want to join a thriving, modern team."
-    />
+    <meta name="description" content="Join Udyamkart's premium makhana business network built for growth, trust, and commercial opportunity." />
     <title>Udyamkart | Join Our Elite Team</title>
+    
+    <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
-  <body>
+  <body style="background-image: linear-gradient(to bottom, rgba(9, 13, 22, 0.88), rgba(9, 13, 22, 0.96)), url('images/makhana_bg.jpg'); background-attachment: fixed; background-position: center; background-size: cover; background-repeat: no-repeat;">
     <canvas id="particles" aria-hidden="true"></canvas>
+    
+    <!-- Theme Toggle -->
     <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
       <span class="theme-icon">☀︎</span>
     </button>
 
     <div class="page-shell">
+      <!-- Header -->
       <header class="topbar">
         <a href="index.html" class="brand">
           <img class="brand-logo" src="https://udyamkart.com/wp-content/uploads/2024/03/IMG_20240217_184612-removebg.png" alt="Udyamkart logo" />
@@ -41,45 +40,60 @@
       </header>
 
       <main>
+        <!-- Hero Section with Integrated Registration Form -->
         <section class="hero">
           <div class="hero-copy reveal">
             <p class="eyebrow">Premium Team Invitation</p>
-            <h1>Step into a brighter future with Udyamkart, where growth, excellence, and impact come together.</h1>
+            <h1>Scale Your Business With Udyamkart</h1>
             <p class="hero-text">
-              Udyamkart delivers a confident, modern experience for ambitious people who want to grow with a trusted, professional community.
+              Join a trusted, premium makhana network built for ambitious professionals looking for sustainable commercial growth.
             </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="join.html">Join Our Team</a>
-              <a class="btn btn-secondary" href="about.html">Discover More</a>
-            </div>
+            
             <ul class="hero-highlights">
-              <li>✅ Fast onboarding</li>
-              <li>✅ High-growth opportunities</li>
-              <li>✅ Professional support</li>
+              <li>✅ Fast Onboarding</li>
+              <li>✅ High-Growth Model</li>
+              <li>✅ 24/7 Professional Support</li>
             </ul>
 
             <div class="premium-strip reveal">
-              <span class="strip-pill">Official Business Invitation</span>
-              <p>Udyamkart invites a curated group of professionals to join a premium makhana business network built for growth, trust, and real commercial opportunity.</p>
+              <span class="strip-pill">Official Network</span>
+              <p>Curated opportunities with verified quality control and refined operations.</p>
             </div>
           </div>
 
+          <!-- FIXED: Added 'registration-box' class to match CSS exactly -->
           <div class="hero-visual reveal">
-            <div class="hero-card">
+            <div class="hero-card registration-box">
               <div class="card-glow"></div>
               <div class="card-content">
-                <img class="hero-logo" src="https://udyamkart.com/wp-content/uploads/2024/03/IMG_20240217_184612-removebg.png" alt="Uydamkart logo" />
-                <p class="mini-label">Exclusive Invitation</p>
-                <h2>Launch with confidence</h2>
-                <p>Be part of a modern network that is passionate, organized, and driven.</p>
+                <p class="mini-label">Secure Application</p>
+                <h2>Apply For Access</h2>
+                <p>Fill out the form below to secure your exclusive invitation.</p>
+                
+                <form action="#" method="POST" class="hero-form">
+                  <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="John Doe" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="emailAddress">Email Address</label>
+                    <input type="email" id="emailAddress" name="emailAddress" placeholder="john@example.com" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+91 XXXXX XXXXX" required />
+                  </div>
+                  <button type="submit" class="btn btn-primary form-submit-btn">Submit Application</button>
+                </form>
+
                 <div class="metric-row">
                   <div>
                     <strong>500+</strong>
-                    <span>Members</span>
+                    <span>Active Members</span>
                   </div>
                   <div>
-                    <strong>24/7</strong>
-                    <span>Team Support</span>
+                    <strong>100%</strong>
+                    <span>Verified Partners</span>
                   </div>
                 </div>
               </div>
@@ -87,32 +101,34 @@
           </div>
         </section>
 
+        <!-- Benefits Section -->
         <section class="invite-benefits reveal">
           <div class="section-heading">
-            <p class="eyebrow">Invitation at a glance</p>
-            <h2>Designed for a confident, business-grade introduction.</h2>
+            <p class="eyebrow">Key Benefits</p>
+            <h2>Built For Professional Impact</h2>
           </div>
           <div class="benefit-cards">
             <article class="benefit-card">
               <h3>Premium Access</h3>
-              <p>Receive a curated opportunity brief, dedicated onboarding support, and a direct path into our professional makhana network.</p>
+              <p>Direct entry into our premium ecosystem with dedicated onboarding priority.</p>
             </article>
             <article class="benefit-card">
               <h3>Trusted Partnership</h3>
-              <p>Engage with a team that values reputation, quality control, and sustainable growth across every collaboration.</p>
+              <p>Collaborate with global standards of quality control and business management.</p>
             </article>
             <article class="benefit-card">
-              <h3>Business Impact</h3>
-              <p>Unlock refined operations, quality sourcing, and a proven invitation process built for ambitious professionals.</p>
+              <h3>Verified Scale</h3>
+              <p>Unlock optimized sourcing pipelines designed for rapid commercial growth.</p>
             </article>
           </div>
         </section>
 
+        <!-- Countdown Section -->
         <section class="countdown reveal">
           <div>
-            <p class="eyebrow">Upcoming milestone</p>
-            <h2>Our next big launch is coming soon.</h2>
-            <p>Join the movement and be part of the moment.</p>
+            <p class="eyebrow">Upcoming Milestone</p>
+            <h2>Next Commercial Batch Launching Soon</h2>
+            <p>Secure your partnership slot before registrations close.</p>
           </div>
           <div class="countdown-grid">
             <div><strong id="days">00</strong><span>Days</span></div>
@@ -122,31 +138,7 @@
           </div>
         </section>
 
-        <section class="section-grid">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Why choose us</p>
-            <h2>A polished experience built for modern success.</h2>
-            <p>Every detail is crafted to feel premium, welcoming, and clear so your invitation makes a lasting impression.</p>
-          </div>
-          <div class="cards">
-            <article class="feature-card reveal">
-              <div class="icon">✦</div>
-              <h3>Elegant Presentation</h3>
-              <p>Our design blends clarity, motion, and luxury to create a memorable first impression.</p>
-            </article>
-            <article class="feature-card reveal">
-              <div class="icon">⚡</div>
-              <h3>Fast Growth</h3>
-              <p>We provide a simple path to join, connect, and grow without unnecessary complexity.</p>
-            </article>
-            <article class="feature-card reveal">
-              <div class="icon">◎</div>
-              <h3>Trusted Community</h3>
-              <p>Experience genuine support, teamwork, and leadership from people who care about your journey.</p>
-            </article>
-          </div>
-        </section>
-
+        <!-- Video Showcase Section -->
         <section class="showcase reveal">
           <div class="showcase-media">
             <div class="media-frame">
@@ -161,92 +153,59 @@
             </div>
           </div>
           <div class="showcase-copy">
-            <p class="eyebrow">Immersive showcase</p>
-            <h2>Make the first impression feel as premium as the opportunity itself.</h2>
-            <p>Every motion detail, glow, and transition is crafted to create trust, charm, and a highly professional feel.</p>
+            <p class="eyebrow">Operations Video</p>
+            <h2>Transparent Processing Standards</h2>
+            <p>See how our premium quality control and operations run at the ground level.</p>
             <a class="btn btn-secondary" href="contact.html">Book a Consultation</a>
           </div>
         </section>
 
+        <!-- Testimonial Section -->
         <section class="testimonial-section reveal">
           <div class="testimonial-head">
-            <p class="eyebrow">Client feedback</p>
-            <h2>What people experience when they engage with our brand.</h2>
+            <p class="eyebrow">Partner Feedback</p>
+            <h2>Trusted By Top Industry Leaders</h2>
           </div>
           <div class="testimonial-slider" id="testimonialSlider">
             <article class="testimonial active">
               <span class="testimonial-badge">Verified Partner</span>
-              <p>“The experience feels refined, confident, and incredibly professional from the first click.”</p>
+              <p>“The experience feels highly professional and optimized right from day one.”</p>
               <strong>— Olivia Carter</strong>
             </article>
             <article class="testimonial">
               <span class="testimonial-badge">Verified Partner</span>
-              <p>“The animation and presentation instantly made the invitation feel premium and memorable.”</p>
+              <p>“Transparent supply chain and exceptional team support throughout.”</p>
               <strong>— Daniel Ross</strong>
             </article>
-            <article class="testimonial">
-              <span class="testimonial-badge">Verified Partner</span>
-              <p>“It is clear, elegant, and genuinely welcoming. The site feels modern in the best way.”</p>
-              <strong>— Maya Chen</strong>
-            </article>
           </div>
         </section>
 
-        <section class="split-section reveal">
-          <div>
-            <p class="eyebrow">How it works</p>
-            <h2>Three simple steps to begin your journey.</h2>
-            <p>We keep the process smooth, professional, and welcoming from the very first click.</p>
-          </div>
-          <div class="steps">
-            <div class="step-card">
-              <span>01</span>
-              <h3>Register</h3>
-              <p>Share your details with our friendly team through the secure join form.</p>
-            </div>
-            <div class="step-card">
-              <span>02</span>
-              <h3>Connect</h3>
-              <p>We review your interest and guide you toward the right opportunity.</p>
-            </div>
-            <div class="step-card">
-              <span>03</span>
-              <h3>Launch</h3>
-              <p>Begin your journey with confidence and the support of an experienced community.</p>
-            </div>
-          </div>
-        </section>
-
+        <!-- FAQ Section -->
         <section class="faq-section reveal">
           <div class="section-heading">
-            <p class="eyebrow">Invitation details</p>
-            <h2>Questions clients ask before joining our invite-only business program.</h2>
+            <p class="eyebrow">FAQ</p>
+            <h2>Frequently Asked Questions</h2>
           </div>
           <div class="accordion-grid">
             <article class="accordion-card">
-              <button class="accordion-toggle" type="button" aria-expanded="false">Who is this invitation best suited for?</button>
+              <button class="accordion-toggle" type="button" aria-expanded="false">Who is this program for?</button>
               <div class="accordion-content">
-                <p>Professionals and partners interested in premium makhana business growth, quality networking, and a structured entry into our trusted ecosystem.</p>
+                <p>Professionals and business owners seeking premium makhana network access and scalable growth channels.</p>
               </div>
             </article>
             <article class="accordion-card">
-              <button class="accordion-toggle" type="button" aria-expanded="false">What support is included after joining?</button>
+              <button class="accordion-toggle" type="button" aria-expanded="false">What support do you provide?</button>
               <div class="accordion-content">
-                <p>Our team provides onboarding guidance, priority access to resources, communication support, and regular check-ins to ensure progress.</p>
-              </div>
-            </article>
-            <article class="accordion-card">
-              <button class="accordion-toggle" type="button" aria-expanded="false">How do I secure my invitation spot?</button>
-              <div class="accordion-content">
-                <p>Submit your application through the join form, and our team will review your interest quickly to preserve the invitation’s exclusivity.</p>
+                <p>Full logistics guidance, end-to-end quality control resources, and operational assistance.</p>
               </div>
             </article>
           </div>
         </section>
 
+        <!-- Call to Action Section -->
         <section class="cta reveal">
-          <h2>Ready to join a team that values professionalism and growth?</h2>
-          <p>Let’s create a strong and inspiring invitation experience together.</p>
+          <h2>Ready To Accelerate Your Business Growth?</h2>
+          <p>Apply today and access the next commercial batch.</p>
           <div class="hero-actions cta-actions">
             <a class="btn btn-primary" href="join.html">Apply Now</a>
             <a class="btn btn-secondary" href="contact.html">Contact Us</a>
@@ -254,14 +213,16 @@
         </section>
       </main>
 
+      <!-- Footer -->
       <footer class="footer">
-        <p>© <span class="year">2026</span> Uydamkart. Crafted for thoughtful growth.</p>
+        <p>© <span class="year">2026</span> Udyamkart. Crafted for thoughtful growth.</p>
       </footer>
     </div>
 
+    <!-- Floating Actions Container -->
     <div class="floating-actions">
-      <a class="fab fab-whatsapp" href="https://wa.me/1555014778" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
-      <a class="fab fab-call" href="tel:+1555014778" aria-label="Call us">📞</a>
+      <a class="fab fab-whatsapp-large" href="https://wa.me/919205520952" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
+      <a class="fab fab-call-large" href="tel:+919205520952" aria-label="Call us">📞</a>
     </div>
 
     <script src="js/script.js"></script>
