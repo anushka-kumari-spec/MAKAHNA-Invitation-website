@@ -1,12 +1,14 @@
-/* 📱 RESPONSIVE STYLESHEET */
+/* 📱 UDYAMKART PREMIUM RESPONSIVE STYLESHEET */
 
+/* Tablet & Smaller Desktops */
 @media (max-width: 900px) {
   .hero,
   .split-section,
   .contact-layout,
   .showcase,
   .invite-benefits {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 32px;
   }
 
   .stats,
@@ -14,31 +16,39 @@
   .about-grid,
   .steps,
   .benefit-cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px;
   }
 }
 
+/* Mobile Devices */
 @media (max-width: 640px) {
   .page-shell {
-    width: min(100% - 20px, 1200px);
+    width: 100% !important;
+    padding: 0 12px !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .topbar {
-    flex-direction: column;
-    gap: 12px;
-    border-radius: 24px;
+    flex-direction: column !important;
+    gap: 16px;
+    border-radius: 20px !important;
     text-align: center;
+    padding: 16px !important;
   }
 
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
     gap: 12px;
+    width: 100%;
   }
 
   .hero {
-    min-height: auto;
-    padding-top: 24px;
+    min-height: auto !important;
+    padding-top: 32px !important;
+    gap: 24px;
   }
 
   .stats,
@@ -48,7 +58,21 @@
   .form-grid,
   .benefit-cards,
   .accordion-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  /* 🛠 FIXED: Mobile par Registration Box aur Inputs screen se bahar na jayein */
+  .registration-box,
+  .hero-card,
+  .hero-form {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-form .form-group input {
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   /* 🛠 FIXED: Mobile par 3D hover/tilt movement layouts ko break na kare */
@@ -56,33 +80,38 @@
   .hero-card:hover {
     transform: none !important;
     transition: none !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
   }
 
   .hero-actions {
-    flex-direction: column;
-    width: 100%;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px;
   }
   
   .hero-actions .btn {
-    width: 100%;
+    width: 100% !important;
+    text-align: center;
   }
 
-  /* 🛠 FIXED: Sir ka bataya hua Countdown Layout Overflow Fix */
+  /* 🛠 FIXED: Countdown Layout Overflow Fix */
   .countdown {
     grid-template-columns: 1fr !important;
     text-align: center;
-    padding: 22px 18px;
+    padding: 22px 18px !important;
+    box-sizing: border-box;
   }
 
   .countdown-grid {
     grid-template-columns: repeat(2, 1fr) !important; /* 4 items ko 2x2 grid me stack karega */
     gap: 12px !important;
     width: 100% !important;
-    margin-top: 18px;
+    margin-top: 18px !important;
   }
 
   .countdown-grid div {
     padding: 14px 10px !important;
+    box-sizing: border-box;
   }
 
   .faq-section,
@@ -90,19 +119,20 @@
   .showcase,
   .testimonial-section,
   .cta {
-    padding: 22px 18px;
+    padding: 22px 18px !important;
   }
 
   .accordion-toggle {
-    padding: 18px;
+    padding: 18px !important;
   }
 
   .accordion-content {
-    padding: 16px 18px 18px;
+    padding: 16px 18px 18px !important;
   }
 
   .floating-actions {
-    right: 12px;
-    bottom: 12px;
+    right: 16px !important;
+    bottom: 16px !important;
+    gap: 12px;
   }
 }
