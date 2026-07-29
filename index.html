@@ -9,23 +9,177 @@
     <!-- Main Style Sheet -->
     <link rel="stylesheet" href="css/style.css" />
     
-    <!-- responsive.css link jo missing tha -->
+    <!-- Responsive Style Sheet -->
     <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Simple, Clean & Casual Google Font (Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      :root {
+        /* Logo Custom Colors */
+        --udyam-blue: #1E3A8A;  /* Dark Blue */
+        --kart-red: #DC2626;    /* Red */
+        --text-dark: #1E293B;
+      }
+
+      body {
+        font-family: 'Outfit', sans-serif; /* Casual and clean font */
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        color: var(--text-dark);
+      }
+
+      .page-shell {
+        position: relative;
+        min-height: 100vh;
+        z-index: 1;
+      }
+
+      /* Makhana Farming Background Image Slider */
+      .bg-slider {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -2;
+        overflow: hidden;
+      }
+
+      .bg-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 2s ease-in-out;
+      }
+
+      .bg-slide.active {
+        opacity: 1;
+      }
+
+      /* Light & Bright Overlay so Makhana farming photos stay visible */
+      .bg-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        background: rgba(255, 255, 255, 0.45); /* Very light tint */
+        backdrop-filter: blur(2px);
+      }
+
+      /* Logo Text Custom Styling (Udyam in Dark Blue, Kart in Red) */
+      .brand-title-text {
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+      }
+
+      .brand-title-text .part-udyam {
+        color: var(--udyam-blue) !important;
+      }
+
+      .brand-title-text .part-kart {
+        color: var(--kart-red) !important;
+      }
+
+      /* Top Navigation Links Clear Visibility */
+      .nav-links a {
+        color: var(--udyam-blue) !important;
+        font-weight: 600 !important;
+        font-size: 1rem !important;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        opacity: 0.9;
+      }
+
+      .nav-links a:hover, 
+      .nav-links a.active {
+        color: #ffffff !important;
+        background-color: var(--udyam-blue) !important;
+        opacity: 1;
+      }
+
+      /* Clean Registration Card */
+      .hero-card.registration-box {
+        background: rgba(255, 255, 255, 0.85) !important;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        color: #0F172A;
+      }
+
+      .hero-copy h1 {
+        color: #0F172A;
+        font-weight: 700;
+      }
+
+      .hero-text {
+        color: #334155;
+      }
+
+      /* Both Hero Buttons Style Override */
+      .btn-blue {
+        background: var(--udyam-blue) !important;
+        color: #ffffff !important;
+        border: 1px solid var(--udyam-blue) !important;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .btn-blue:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+      }
+    </style>
   </head>
   <body>
 
+    <!-- Makhana Farming Background Images -->
+    <div class="bg-slider">
+      <div class="bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1600');"></div>
+      <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1600');"></div>
+      <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1586771107445-d3ca888129ff?q=80&w=1600');"></div>
+    </div>
+    
+    <!-- Light & Transparent Overlay -->
+    <div class="bg-overlay"></div>
+
     <div class="page-shell">
-      <!-- Premium Spatial Top Bar -->
+      <!-- Top Bar -->
       <header class="topbar">
         <a href="index.html" class="brand">
           <img class="brand-logo" src="https://udyamkart.com/wp-content/uploads/2024/03/IMG_20240217_184612-removebg.png" alt="Udyamkart logo" />
           <span>
-            <strong>Udyamkart</strong>
-            <small>Growth Ecosystem</small>
+            <!-- Udyam in Dark Blue & Kart in Red -->
+            <strong class="brand-title-text">
+              <span class="part-udyam">Udyam</span><span class="part-kart">kart</span>
+            </strong>
+            <!-- Updated Tagline -->
+            <small style="color: #475569;">Your partner in business growth</small>
           </span>
         </a>
         
-        <!-- Architectural Capsule Dock Menu -->
+        <!-- Dock Menu -->
         <nav class="nav-links">
           <a href="index.html" class="active">Home</a>
           <a href="about.html">About</a>
@@ -38,30 +192,25 @@
         <!-- Hero Section -->
         <section class="hero">
           <div class="hero-copy">
-            <p class="eyebrow">Premium Team Invitation</p>
+            <p class="eyebrow" style="color: #1E3A8A; font-weight: 600;">Premium Team Invitation</p>
             <h1>Step into a brighter future with Udyamkart, where growth, excellence, and impact come together.</h1>
             <p class="hero-text">
               Udyamkart delivers a confident, modern experience for ambitious people who want to grow with a trusted, professional community.
             </p>
             
             <div class="hero-actions">
-              <a href="join.html" class="btn btn-primary">Join Our Team</a>
-              <a href="#benefits" class="btn btn-secondary">Discover More</a>
+              <a href="join.html" class="btn btn-blue">Join Our Team</a>
+              <!-- Discover More button with link & blue color -->
+              <a href="https://udyamkart.com/" target="_blank" rel="noopener noreferrer" class="btn btn-blue">Discover More</a>
             </div>
-
-            <ul class="hero-highlights">
-              <li>⚡ Fast Onboarding</li>
-              <li>📈 High-Growth Tracks</li>
-              <li>💼 Enterprise Support</li>
-            </ul>
           </div>
 
           <!-- Application Box -->
           <div class="hero-visual">
             <div class="hero-card registration-box">
-              <p class="mini-label">Exclusive Access</p>
+              <p class="mini-label" style="color: var(--kart-red); font-weight: 600;">Exclusive Access</p>
               <h2>Launch with confidence</h2>
-              <p style="color: var(--muted); font-size: 0.95rem; margin-bottom: 24px;">Be part of a modern network that is passionate, organized, and driven.</p>
+              <p style="color: #475569; font-size: 0.95rem; margin-bottom: 24px;">Be part of a modern network that is passionate, organized, and driven.</p>
               
               <form action="#" method="POST" class="hero-form">
                 <div class="form-group" style="margin-bottom: 16px;">
@@ -73,7 +222,7 @@
                 <div class="form-group" style="margin-bottom: 24px;">
                   <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required />
                 </div>
-                <button type="submit" class="btn btn-primary form-submit-btn">Submit Application</button>
+                <button type="submit" class="btn btn-primary form-submit-btn" style="background: var(--kart-red); border: none;">Submit Application</button>
               </form>
             </div>
           </div>
@@ -87,8 +236,22 @@
       <a class="fab fab-call-large" href="tel:+919205520952">📞</a>
     </div>
 
-    <!-- script.js link jo missing tha -->
+    <!-- External Script File -->
     <script src="js/script.js"></script>
+
+    <!-- Background Slider Script -->
+    <script>
+      const slides = document.querySelectorAll('.bg-slide');
+      let currentSlide = 0;
+
+      function changeBackground() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }
+
+      setInterval(changeBackground, 5000);
+    </script>
 
   </body>
 </html>

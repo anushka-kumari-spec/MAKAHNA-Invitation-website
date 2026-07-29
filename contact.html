@@ -3,29 +3,198 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us | Udyamkart Makhana Network</title>
+    <meta name="description" content="Contact Udyamkart for partnership opportunities, consulting, and business inquiries." />
+    <title>Contact Us | Udyamkart</title>
     
-    <!-- Fonts & Styles -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <!-- Main Style Sheet -->
     <link rel="stylesheet" href="css/style.css" />
+    
+    <!-- Responsive Style Sheet -->
     <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Simple, Clean & Casual Google Font (Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      :root {
+        /* Logo Custom Colors */
+        --udyam-blue: #1E3A8A;  /* Dark Blue */
+        --kart-red: #DC2626;    /* Red */
+        --text-dark: #1E293B;
+      }
+
+      body {
+        font-family: 'Outfit', sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        color: var(--text-dark);
+      }
+
+      .page-shell {
+        position: relative;
+        min-height: 100vh;
+        z-index: 1;
+      }
+
+      /* Makhana Farming Background Image Slider (Matching Home & About) */
+      .bg-slider {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -2;
+        overflow: hidden;
+      }
+
+      .bg-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 2s ease-in-out;
+      }
+
+      .bg-slide.active {
+        opacity: 1;
+      }
+
+      /* Light & Transparent Overlay */
+      .bg-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        background: rgba(255, 255, 255, 0.45);
+        backdrop-filter: blur(2px);
+      }
+
+      /* Logo Text Custom Styling */
+      .brand-title-text {
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+      }
+
+      .brand-title-text .part-udyam {
+        color: var(--udyam-blue) !important;
+      }
+
+      .brand-title-text .part-kart {
+        color: var(--kart-red) !important;
+      }
+
+      /* Top Navigation Links Clear Visibility */
+      .nav-links a {
+        color: var(--udyam-blue) !important;
+        font-weight: 600 !important;
+        font-size: 1rem !important;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        opacity: 0.9;
+      }
+
+      .nav-links a:hover, 
+      .nav-links a.active {
+        color: #ffffff !important;
+        background-color: var(--udyam-blue) !important;
+        opacity: 1;
+      }
+
+      /* Glassmorphic Cards Styling */
+      .info-box {
+        padding: 18px 20px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .hero-card.registration-box {
+        background: rgba(255, 255, 255, 0.88) !important;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        color: #0F172A;
+      }
+
+      .hero-copy h1 {
+        color: #0F172A;
+        font-weight: 700;
+        text-shadow: 0 2px 10px rgba(255, 255, 255, 0.7);
+      }
+
+      .hero-text {
+        color: #1E293B;
+        font-weight: 500;
+      }
+
+      /* Form Elements */
+      .hero-form input, 
+      .hero-form textarea {
+        width: 100%;
+        padding: 14px;
+        border-radius: 8px;
+        border: 1px solid #CBD5E1;
+        background: #FFFFFF;
+        color: #0F172A;
+        font-size: 0.95rem;
+        font-family: inherit;
+        outline: none;
+        box-sizing: border-box;
+      }
+
+      .hero-form input:focus, 
+      .hero-form textarea:focus {
+        border-color: var(--udyam-blue);
+      }
+    </style>
   </head>
   <body>
 
+    <!-- Makhana Farming Background Image Slider (Matching Home & About) -->
+    <div class="bg-slider">
+      <div class="bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1600');"></div>
+      <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1600');"></div>
+      <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1586771107445-d3ca888129ff?q=80&w=1600');"></div>
+    </div>
+    
+    <!-- Light & Transparent Overlay -->
+    <div class="bg-overlay"></div>
+
     <div class="page-shell">
-      <!-- Premium Spatial Top Bar (Fixed Capsule Style) -->
+      <!-- Top Bar -->
       <header class="topbar">
         <a href="index.html" class="brand">
           <img class="brand-logo" src="https://udyamkart.com/wp-content/uploads/2024/03/IMG_20240217_184612-removebg.png" alt="Udyamkart logo" />
           <span>
-            <strong>Udyamkart</strong>
-            <small>Growth Ecosystem</small>
+            <!-- Udyam in Dark Blue & Kart in Red -->
+            <strong class="brand-title-text">
+              <span class="part-udyam">Udyam</span><span class="part-kart">kart</span>
+            </strong>
+            <small style="color: #334155; font-weight: 600;">Your partner in business growth</small>
           </span>
         </a>
         
-        <!-- FIX: Architectural Capsule Dock Menu (No Notification Vibe) -->
+        <!-- Navigation Links -->
         <nav class="nav-links">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
@@ -34,93 +203,107 @@
         </nav>
       </header>
 
-      <!-- 2-Column Split Layout (Matches index.html structure perfectly) -->
-      <main class="page-content hero" style="min-height: 75vh; padding: 20px 0;">
-        
-        <!-- Left Side: Copy & Contact Details -->
-        <section class="hero-copy reveal">
-          <p class="eyebrow" style="color: var(--accent-blue);">Contact us</p>
-          <h1 style="font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 4.5vw, 3.8rem); font-weight: 700; line-height: 1.2; margin-bottom: 24px; color: #ffffff;">
-            We would love to hear from you.
-          </h1>
-          <p class="hero-text" style="margin-bottom: 40px; color: var(--muted); font-size: 1.1rem; line-height: 1.7;">
-            Reach out for partnership opportunities, commercial joining queries, or general business inquiries. Our dedicated team responds with care and absolute professionalism.
-          </p>
+      <main>
+        <!-- 2-Column Split Hero Section -->
+        <section class="hero">
           
-          <!-- Premium Contact Info Blocks Aligned with Cosmos Palette -->
-          <div class="contact-details" style="display: flex; flex-direction: column; gap: 20px;">
+          <!-- Left Side: Copy & Contact Details -->
+          <div class="hero-copy">
+            <p class="eyebrow" style="color: #1E3A8A; font-weight: 700;">Contact Us</p>
+            <h1>We would love to hear from you.</h1>
+            <p class="hero-text">
+              Reach out for partnership opportunities, commercial joining queries, or general business inquiries. Our dedicated team responds with care and absolute professionalism.
+            </p>
             
-            <div style="padding: 20px; border-radius: 16px; background: var(--panel); border: 1px solid var(--border); display: flex; align-items: center; gap: 20px; backdrop-filter: blur(10px);">
-              <span style="font-size: 1.5rem;">✉️</span>
-              <div>
-                <small style="display: block; color: var(--accent-blue); font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em; margin-bottom: 4px;">Email Address</small>
-                <a href="mailto:hello@udyamkart.com" style="color: var(--text); text-decoration: none; font-weight: 500; font-size: 1rem; transition: color 0.2s ease;">hello@udyamkart.com</a>
+            <!-- Contact Details Blocks -->
+            <div class="contact-details" style="display: flex; flex-direction: column; gap: 16px; margin-top: 24px;">
+              
+              <div class="info-box">
+                <span style="font-size: 1.4rem;">✉️</span>
+                <div>
+                  <small style="display: block; color: #1E3A8A; font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 2px;">Email Address</small>
+                  <a href="mailto:hello@udyamkart.com" style="color: #0F172A; text-decoration: none; font-weight: 600; font-size: 1rem;">hello@udyamkart.com</a>
+                </div>
               </div>
-            </div>
 
-            <div style="padding: 20px; border-radius: 16px; background: var(--panel); border: 1px solid var(--border); display: flex; align-items: center; gap: 20px; backdrop-filter: blur(10px);">
-              <span style="font-size: 1.5rem;">📞</span>
-              <div>
-                <small style="display: block; color: var(--accent-blue); font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em; margin-bottom: 4px;">Phone Support</small>
-                <a href="tel:+919205520952" style="color: var(--text); text-decoration: none; font-weight: 500; font-size: 1rem; transition: color 0.2s ease;">+91 92055 20952</a>
+              <div class="info-box">
+                <span style="font-size: 1.4rem;">📞</span>
+                <div>
+                  <small style="display: block; color: #1E3A8A; font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 2px;">Phone Support</small>
+                  <a href="tel:+919205520952" style="color: #0F172A; text-decoration: none; font-weight: 600; font-size: 1rem;">+91 92055 20952</a>
+                </div>
               </div>
-            </div>
 
-            <div style="padding: 20px; border-radius: 16px; background: var(--panel); border: 1px solid var(--border); display: flex; align-items: center; gap: 20px; backdrop-filter: blur(10px);">
-              <span style="font-size: 1.5rem;">📍</span>
-              <div>
-                <small style="display: block; color: var(--accent-blue); font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em; margin-bottom: 4px;">Headquarters</small>
-                <a href="https://maps.app.goo.gl/aEtYsAZkXnwXj4sZ8?g_st=ac" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none; font-weight: 600; font-size: 1rem; transition: opacity 0.2s ease;">View on Google Maps →</a>
+              <div class="info-box">
+                <span style="font-size: 1.4rem;">📍</span>
+                <div>
+                  <small style="display: block; color: #1E3A8A; font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 2px;">Headquarters</small>
+                  <a href="https://maps.app.goo.gl/aEtYsAZkXnwXj4sZ8?g_st=ac" target="_blank" rel="noopener noreferrer" style="color: #DC2626; text-decoration: none; font-weight: 700; font-size: 0.95rem;">View on Google Maps →</a>
+                </div>
               </div>
-            </div>
 
+            </div>
           </div>
-        </section>
 
-        <!-- Right Side: Elite Glassmorphic Contact Form -->
-        <section class="hero-visual reveal">
-          <div class="hero-card registration-box" style="padding: 44px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); backdrop-filter: blur(40px); border-radius: 32px; box-shadow: var(--shadow);">
-            
-            <p class="mini-label">Message Channel</p>
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 1.85rem; font-weight: 700; margin-bottom: 24px; letter-spacing: -0.01em;">Send a Message</h2>
+          <!-- Right Side: Contact Form Glass Box -->
+          <div class="hero-visual">
+            <div class="hero-card registration-box">
+              <p class="mini-label" style="color: var(--kart-red); font-weight: 700;">Message Channel</p>
+              <h2>Send a Message</h2>
 
-            <form id="contactForm" class="hero-form" action="sendmail.php" method="POST">
-              <input type="hidden" name="form_type" value="Contact" />
-              
-              <div class="form-group" style="margin-bottom: 16px;">
-                <input type="text" id="name" name="name" required placeholder="Your Name" />
-              </div>
-              
-              <div class="form-group" style="margin-bottom: 16px;">
-                <input type="email" id="email" name="email" required placeholder="Your Email" />
-              </div>
-              
-              <div class="form-group" style="margin-bottom: 24px;">
-                <textarea id="message" name="message" rows="4" required placeholder="Write your corporate message or proposal details here..." style="width: 100%; padding: 18px; border-radius: 14px; border: 1px solid var(--border); background: rgba(0, 0, 0, 0.25); color: var(--text); font-size: 0.95rem; font-family: inherit; resize: vertical; transition: all 0.3s ease; outline: none;"></textarea>
-              </div>
-              
-              <button type="submit" class="btn btn-primary form-submit-btn">Send Message</button>
-              
-              <p class="form-message" role="status" aria-live="polite" style="text-align: center; margin-top: 12px; font-size: 0.9rem; color: var(--muted);"></p>
-            </form>
-
+              <form id="contactForm" class="hero-form" action="sendmail.php" method="POST">
+                <input type="hidden" name="form_type" value="Contact" />
+                
+                <div class="form-group" style="margin-bottom: 16px;">
+                  <input type="text" id="name" name="name" required placeholder="Your Name" />
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 16px;">
+                  <input type="email" id="email" name="email" required placeholder="Your Email" />
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 20px;">
+                  <textarea id="message" name="message" rows="4" required placeholder="Write your corporate message or proposal details here..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary form-submit-btn" style="background: var(--kart-red); border: none; width: 100%;">Send Message</button>
+                
+                <p class="form-message" role="status" aria-live="polite" style="text-align: center; margin-top: 12px; font-size: 0.9rem; color: #475569;"></p>
+              </form>
+            </div>
           </div>
-        </section>
 
+        </section>
       </main>
 
       <!-- Footer -->
-      <footer class="footer">
+      <footer class="footer" style="text-align: center; padding: 20px; color: #475569; font-weight: 500;">
         <p>© 2026 Udyamkart. Crafted for thoughtful growth.</p>
       </footer>
     </div>
 
-    <!-- Floating Clean Actions Frame -->
+    <!-- Floating Actions Frame -->
     <div class="floating-actions">
       <a class="fab fab-whatsapp-large" href="https://wa.me/919205520952" target="_blank" rel="noopener noreferrer">💬</a>
       <a class="fab fab-call-large" href="tel:+919205520952">📞</a>
     </div>
 
+    <!-- External Script File -->
     <script src="js/script.js"></script>
+
+    <!-- Background Slider Script -->
+    <script>
+      const slides = document.querySelectorAll('.bg-slide');
+      let currentSlide = 0;
+
+      function changeBackground() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }
+
+      setInterval(changeBackground, 5000);
+    </script>
+
   </body>
 </html>
