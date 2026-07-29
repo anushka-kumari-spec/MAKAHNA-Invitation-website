@@ -21,7 +21,7 @@
       :root {
         /* Logo Custom Colors */
         --udyam-blue: #070708de;  /* Dark Blue */
-        --KART-red: #DC2626;    /* Red */
+        --kart-red: #DC2626;    /* Red */
         --text-dark: #1E293B;
       }
 
@@ -78,7 +78,7 @@
         backdrop-filter: blur(2px);
       }
 
-      /* Logo Text Custom Styling (Udyam in Dark Blue, Kart in Red) */
+      /* Logo Text Custom Styling (udyam in Black, KART in Red Uppercase) */
       .brand-title-text {
         font-size: 1.6rem;
         font-weight: 700;
@@ -86,11 +86,13 @@
       }
 
       .brand-title-text .part-udyam {
-        color: var(--udyam-blue) !important;
+        color: #000000 !important;
+        text-transform: lowercase;
       }
 
       .brand-title-text .part-kart {
         color: var(--kart-red) !important;
+        text-transform: uppercase;
       }
 
       /* Top Navigation Links Clear Visibility */
@@ -170,9 +172,9 @@
         <a href="index.html" class="brand">
           <img class="brand-logo" src="https://udyamkart.com/wp-content/uploads/2024/03/IMG_20240217_184612-removebg.png" alt="Udyamkart logo" />
           <span>
-            <!-- Udyam in Dark Blue & Kart in Red -->
+            <!-- udyam in Black & KART in Red Uppercase -->
             <strong class="brand-title-text">
-              <span class="part-udyam">Udyam</span><span class="part-kart">kart</span>
+              <span class="part-udyam">udyam</span><span class="part-kart">KART</span>
             </strong>
             <!-- Updated Tagline -->
             <small style="color: #475569;">Your partner in business growth</small>
